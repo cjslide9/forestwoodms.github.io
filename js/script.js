@@ -29,7 +29,7 @@ function container(type) {
         ljs.load('css/fullcalendar.min.css', 'css/fullcalendar.print.css', 'css/selected.calendar.css', ['//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'], 'js/fullcalendar.min.js', 'js/gcal.js', function() {
             //Okay, set up the calendar, and we should be done.
             //Now, let's load the calendar.
-			$(".container").text("I'm loading right now. If I stay here like this, something's broken.");
+            $(".container").text("I'm loading right now. If I stay here like this, something's broken.");
             $(".container").load("views/calendar.html", function() {
                 $('#calendar').fullCalendar({
                     googleCalendarApiKey: window.atob("QUl6YVN5Q1NqMkNnbXFlaGZKQ0ZQM1JsUFlZSHVFZ0JoWmJmb2ZR"),
@@ -40,15 +40,14 @@ function container(type) {
             });
             //Good, good. Change it to a close button, just cause.
             $(".calendarButton").attr("href", "javascript:container('none');");
-            $(".calendarButton").text("Close Calendar");
-            
+            $(".container").empty();
+
         });
-    }
-	    else if (type === "none") {
+    } else if (type === "none") {
         //It's nothing.
-		var box = document.getElementsByClassName('container');
-		while (box.lastChild) {
-		  box.removeChild(box.lastChild);
-		}		
+        var box = document.getElementsByClassName('container');
+        while (box.lastChild) {
+            box.removeChild(box.lastChild);
+        }
     }
 }
