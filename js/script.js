@@ -43,7 +43,6 @@ function container(type) {
         });
     } else if (type === "none") {
         //It's nothing.
-		document.getElementById("container").innerHTML = "";
-        }
+        document.getElementById("container").innerHTML = "";
     }
 }
