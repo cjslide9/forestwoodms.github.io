@@ -8,6 +8,9 @@
 .mac {
 	display: none
 }
+* {
+	background-color: blue;
+}
 .navigation {
 	width: 100%;
 	height: 100%;
