@@ -40,9 +40,11 @@ function container(type) {
             });
             //Good, good. Change it to a close button, just cause.
             $(".calendarButton").attr("href", "javascript:container('none');");
+            $(".calendarButton").text("Close Calendar");
         });
     } else if (type === "none") {
         //It's nothing.
         document.getElementById("container").innerHTML = "";
+        document.getElementByClassName("calendarButton").href = "javascript:container('calendar');
     }
 }
