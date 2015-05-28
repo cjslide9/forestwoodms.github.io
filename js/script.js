@@ -58,5 +58,6 @@ function container(type) {
         document.getElementById("calendarButton").href = "javascript:container('calendar')";
         removejscssfile("selected.calendar.css", "css") //remove all occurences "somestyle.css" on page
         document.getElementById("calendarButton").innerHTML = "Calendar";
+        document.getElementById("calendarButton").style.border = "";
     }
 }
