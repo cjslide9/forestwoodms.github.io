@@ -38,7 +38,7 @@ function container(type) {
         ljs.load('css/fullcalendar.min.css', 'css/fullcalendar.print.css', ['//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'], 'js/fullcalendar.min.js', 'js/gcal.js', function() {
             //Okay, set up the calendar, and we should be done.
             //Now, let's load the calendar.
-            document.getElementById("calendarButton").style.border = "solid 5px black";
+            document.getElementById("calendarButton").style.border = "1px solid black";
             $(".container").text("I'm loading right now. If I stay here like this, something's broken.");
             $(".container").load("views/calendar.html", function() {
                 $('#calendar').fullCalendar({
