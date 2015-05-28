@@ -45,6 +45,6 @@ function container(type) {
     } else if (type === "none") {
         //It's nothing.
         document.getElementById("container").innerHTML = "";
-        document.getElementByClassName("calendarButton").href = "javascript:container('calendar')";
+        document.getElementById("calendarButton").href = "javascript:container('calendar')";
     }
 }
