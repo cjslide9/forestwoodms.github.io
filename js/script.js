@@ -1,3 +1,12 @@
+function removejscssfile(filename, filetype){
+    var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
+    var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
+    var allsuspects=document.getElementsByTagName(targetelement)
+    for (var i=allsuspects.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
+    if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)
+        allsuspects[i].parentNode.removeChild(allsuspects[i]) //remove element by calling parentNode.removeChild()
+    }
+}
 //This function runs once the page is loaded. Or, rather, when the body tag is loaded.
 function onLoad() {
     //site-wrap is the whole text part of the webpage.
@@ -46,5 +55,6 @@ function container(type) {
         //It's nothing.
         document.getElementById("container").innerHTML = "";
         document.getElementById("calendarButton").href = "javascript:container('calendar')";
+        removejscssfile("selected.calendar.css", "css") //remove all occurences "somestyle.css" on page
     }
 }
