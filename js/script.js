@@ -35,9 +35,10 @@ function onLoad() {
 function container(type) {
     if (type === "calendar") {
         //Load all the files!
-        ljs.load('css/fullcalendar.min.css', 'css/fullcalendar.print.css', 'css/selected.calendar.css', ['//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'], 'js/fullcalendar.min.js', 'js/gcal.js', function() {
+        ljs.load('css/fullcalendar.min.css', 'css/fullcalendar.print.css', ['//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'], 'js/fullcalendar.min.js', 'js/gcal.js', function() {
             //Okay, set up the calendar, and we should be done.
             //Now, let's load the calendar.
+            document.getElementById("calendarButton").style.border = "solid 5px black";
             $(".container").text("I'm loading right now. If I stay here like this, something's broken.");
             $(".container").load("views/calendar.html", function() {
                 $('#calendar').fullCalendar({
