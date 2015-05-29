@@ -49,7 +49,7 @@ function container(type) {
                 });
             });
             document.getElementById("home").className = "";
-            document.getElementById("calendar").className = "active last";
+            document.getElementById("calendar").className = "active";
         });
     } else if (type === "none") {
         //It's nothing.
