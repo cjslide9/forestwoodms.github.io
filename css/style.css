@@ -221,7 +221,7 @@
 	#cssmenu ul li a:hover:before {
 	  width: 100%;
 	}
-	#cssmenu ul li a:after {
+	/*#cssmenu ul li a:after {
 	  content: "";
 	  display: block;
 	  position: absolute;
@@ -231,7 +231,7 @@
 	  width: 6px;
 	  background: #ffffff;
 	  opacity: .5;
-	}
+	}*/
 	#cssmenu ul li a:before {
 	  content: "";
 	  display: block;
