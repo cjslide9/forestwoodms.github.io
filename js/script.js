@@ -48,16 +48,12 @@ function container(type) {
                     }
                 });
             });
-            //Good, good. Change it to a close button, just cause.
-            $(".calendarButton").attr("href", "javascript:container('none');");
-            $(".calendarButton").text("Close Calendar");
         });
     } else if (type === "none") {
         //It's nothing.
         document.getElementById("container").innerHTML = "";
         document.getElementById("calendarButton").href = "javascript:container('calendar')";
         removejscssfile("selected.calendar.css", "css") //remove all occurences "somestyle.css" on page
-        document.getElementById("calendarButton").innerHTML = "Calendar";
         document.getElementById("calendarButton").style.border = "";
     }
 }
