@@ -42,22 +42,18 @@ function container(type) {
             $(".container").text("I'm loading right now. If I stay here like this, something's broken.");
             $(".container").load("views/calendar.html", function() {
                 $('#calendar').fullCalendar({
-                    googleCalendarApiKey: window.atob("QUl6YVN5Q1NqMkNnbXFlaGZKQ0ZQM1JsUFlZSHVFZ0JoWmJmb2ZR"),
+                    googleCalendarApiKey: window.atob("QUl6YVN5QXNhX3U1SnBBN0xoSnY0NGdwWWpVRDZST2FoUW83eEhJ"),
                     events: {
-                        googleCalendarId: window.atob("aWN1dHY3anAwMmt1dXNlc2c2bThiazA4NHNuZWkxMjJAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20=")
+                        googleCalendarId: window.atob("cHRhb2ZmbXNAZ21haWwuY29t")
                     }
                 });
             });
-            //Good, good. Change it to a close button, just cause.
-            $(".calendarButton").attr("href", "javascript:container('none');");
-            $(".calendarButton").text("Close Calendar");
         });
     } else if (type === "none") {
         //It's nothing.
         document.getElementById("container").innerHTML = "";
         document.getElementById("calendarButton").href = "javascript:container('calendar')";
         removejscssfile("selected.calendar.css", "css") //remove all occurences "somestyle.css" on page
-        document.getElementById("calendarButton").innerHTML = "Calendar";
         document.getElementById("calendarButton").style.border = "";
     }
 }
