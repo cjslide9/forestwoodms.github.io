@@ -44,7 +44,7 @@ function container(type) {
                 $('#calendar').fullCalendar({
                     googleCalendarApiKey: window.atob("QUl6YVN5QXNhX3U1SnBBN0xoSnY0NGdwWWpVRDZST2FoUW83eEhJ"),
                     events: {
-                        googleCalendarId: window.atob("cHRhb2ZmbXNAZ21haWwuY29t")
+                        googleCalendarId: window.atob("aWN1dHY3anAwMmt1dXNlc2c2bThiazA4NHNuZWkxMjJAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20=")
                     }
                 });
             });
