@@ -48,9 +48,12 @@ function container(type) {
                     }
                 });
             });
+            document.getElementById("home").className = "";
+            document.getElementById("calendar").className = "active last";
         });
     } else if (type === "none") {
         //It's nothing.
+        document.getElementById("home").className = "active";
         document.getElementById("container").innerHTML = "";
         document.getElementById("calendarButton").href = "javascript:container('calendar')";
         removejscssfile("selected.calendar.css", "css") //remove all occurences "somestyle.css" on page
