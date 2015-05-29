@@ -48,8 +48,8 @@ function container(type) {
                     }
                 });
             });
-            document.getElementById("home").className = "";
-            document.getElementById("calendar").className = "active";
+            // document.getElementById("home").className = "";
+            // document.getElementById("calendar").className = "active";
         });
     } else if (type === "none") {
         //It's nothing.
