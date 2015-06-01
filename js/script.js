@@ -51,7 +51,7 @@ function container(type) {
             // document.getElementById("calendar").className = "active";
         });
     } else if (type === "contact") {
-      ljs.load('//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', function() {
+      ljs.load('//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', 'https://apis.google.com/js/platform.js', function() {
           $(".container").text("I'm loading right now. If I stay here like this, something's broken.");
           $(".container").load("views/maps.html", function() {});
       });
