@@ -38,7 +38,6 @@ function container(type) {
         ljs.load('css/fullcalendar.min.css', 'css/fullcalendar.print.css', ['//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'], 'js/fullcalendar.min.js', 'js/gcal.js', function() {
             //Okay, set up the calendar, and we should be done.
             //Now, let's load the calendar.
-            document.getElementById("calendarButton").style.border = "1px solid black";
             $(".container").text("I'm loading right now. If I stay here like this, something's broken.");
             $(".container").load("views/calendar.html", function() {
                 $('#calendar').fullCalendar({
@@ -51,12 +50,6 @@ function container(type) {
             // document.getElementById("home").className = "";
             // document.getElementById("calendar").className = "active";
         });
-    } else if (type === "none") {
-        //It's nothing.
-        document.getElementById("home").className = "active";
-        document.getElementById("container").innerHTML = "";
-        document.getElementById("calendarDiv").href = "javascript:container('calendar')";
-        document.getElementById("calendarDiv").style.border = "";
     } else if (type === "contact") {
       ljs.load('//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', function() {
           $(".container").text("I'm loading right now. If I stay here like this, something's broken.");
