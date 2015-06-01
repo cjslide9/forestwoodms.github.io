@@ -55,8 +55,7 @@ function container(type) {
         //It's nothing.
         document.getElementById("home").className = "active";
         document.getElementById("container").innerHTML = "";
-        document.getElementById("calendarButton").href = "javascript:container('calendar')";
-        removejscssfile("selected.calendar.css", "css") //remove all occurences "somestyle.css" on page
-        document.getElementById("calendarButton").style.border = "";
+        document.getElementById("calendarDiv").href = "javascript:container('calendar')";
+        document.getElementById("calendarDiv").style.border = "";
     }
 }
