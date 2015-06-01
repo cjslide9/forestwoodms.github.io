@@ -169,7 +169,7 @@
 	}
 
 	#cssmenu {
-	  background: #00308f ;
+	  background: #0039a9 ;
 	  width: auto;
 	}
 	#cssmenu ul {
@@ -274,7 +274,7 @@
 	    -moz-box-sizing: border-box;
 	    -webkit-box-sizing: border-box;
 	    box-sizing: border-box;
-	    border-bottom: 1px solid #00308f ;
+	    border-bottom: 1px solid #0039a9 ;
 	  }
 	  #cssmenu ul li.last > a,
 	  #cssmenu ul li:last-child > a {
