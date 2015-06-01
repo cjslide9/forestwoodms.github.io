@@ -60,16 +60,7 @@ function container(type) {
     } else if (type === "contact") {
       ljs.load('//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', function() {
           $(".container").text("I'm loading right now. If I stay here like this, something's broken.");
-          $(".container").load("views/maps.html", function() {
-              $('#calendar').fullCalendar({
-                  googleCalendarApiKey: window.atob("QUl6YVN5QXNhX3U1SnBBN0xoSnY0NGdwWWpVRDZST2FoUW83eEhJ"),
-                  events: {
-                      googleCalendarId: window.atob("aWN1dHY3anAwMmt1dXNlc2c2bThiazA4NHNuZWkxMjJAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20=")
-                  }
-              });
-          });
-          // document.getElementById("home").className = "";
-          // document.getElementById("calendar").className = "active";
+          $(".container").load("views/maps.html", function() {});
       });
     }
 }
