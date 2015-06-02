@@ -1,12 +1,3 @@
-function removejscssfile(filename, filetype){
-    var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
-    var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
-    var allsuspects=document.getElementsByTagName(targetelement)
-    for (var i=allsuspects.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
-    if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)
-        allsuspects[i].parentNode.removeChild(allsuspects[i]) //remove element by calling parentNode.removeChild()
-    }
-}
 //This function runs once the page is loaded. Or, rather, when the body tag is loaded.
 function onLoad() {
     //site-wrap is the whole text part of the webpage.
@@ -51,12 +42,22 @@ function container(type) {
     } else if (type === "contact") {
         $(".container").text("I'm loading right now. If I stay here like this, something's broken.");
         $(".container").load("views/maps.html", function() {
+            //I choose you, Google+!
             gapi.plusone.go();
-        });
+            //Go, Facebook!
+            function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+        }
     } else if (type === "form") {
         $(".container").text("I'm loading right now. If I stay here like this, something's broken.");
         $(".container").load("views/form.html", function() {
             //You can do -- what ever -- you want to do.
+            //Insert code here.
         });
     }
 }
