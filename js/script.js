@@ -99,7 +99,7 @@ function container(type) {
                         title: 'Week view',
                         prevYear: '',
                         nextYear: '',
-                        basicWeek   
+                        view: 'basicWeek'   
                     }
                 });
             });
