@@ -74,5 +74,34 @@ function container(type) {
             //You can do -- what ever -- you want to do.
             //Insert code here.
         });
+    } else if (type === "home") {
+        //Load all the files!
+        ljs.load('css/fullcalendar.min.css', 'css/fullcalendar.print.css', [
+            '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'
+        ], 'js/fullcalendar.min.js', 'js/gcal.js', function() {
+            //Okay, set up the calendar, and we should be done.
+            //Now, let's load the calendar.
+            $(".container").text(
+                "I'm loading right now. If I stay here like this, something's broken."
+            );
+            $(".container").load("views/home.html", function() {
+                $('#calendar').fullCalendar({
+                    googleCalendarApiKey: window.atob(
+                        "QUl6YVN5QXNhX3U1SnBBN0xoSnY0NGdwWWpVRDZST2FoUW83eEhJ"
+                    ),
+                    events: {
+                        googleCalendarId: window.atob(
+                            "aWN1dHY3anAwMmt1dXNlc2c2bThiazA4NHNuZWkxMjJAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20="
+                        )
+                    },
+                    header: {
+                        title = 'Week view',
+                        prevYear='',
+                        nextYear='',
+                        basicWeek   
+                    }
+                });
+            });
+        });
     }
 }
