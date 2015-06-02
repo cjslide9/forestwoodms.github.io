@@ -21,6 +21,7 @@ function onLoad() {
             check.checked = false;
         }
     });
+    container('home');
 }
 
 function container(type) {
