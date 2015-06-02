@@ -98,9 +98,9 @@ function container(type) {
                     header: {
                         title: 'Week view',
                         prevYear: '',
-                        nextYear: '',
-                        view: 'basicWeek'   
-                    }
+                        nextYear: ''
+                    },
+                    defaultView: 'basicWeek'
                 });
             });
         });
