@@ -95,9 +95,9 @@ function container(type) {
                         )
                     },
                     header: {
-                        title = 'Week view',
-                        prevYear='',
-                        nextYear='',
+                        title: 'Week view',
+                        prevYear: '',
+                        nextYear: '',
                         basicWeek   
                     }
                 });
