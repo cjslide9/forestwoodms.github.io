@@ -83,7 +83,7 @@ function container(type) {
             //Okay, set up the calendar, and we should be done.
             //Now, let's load the calendar.
             $(".container").text(
-                "I'm loading right now. If I stay here like this, something's broken."
+                "We're reciving data all the way from somewhere. If I stay here, the data stopped sending, and the site is most likely broken. Please contact Mr. Graham if this keeps happening."
             );
             $(".container").load("views/home.html", function() {
                 $('#calendar').fullCalendar({
