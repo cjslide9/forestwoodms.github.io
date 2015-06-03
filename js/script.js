@@ -1,5 +1,5 @@
 //This function runs once the page is loaded. Or, rather, when the body tag is loaded.
-function onLoad() {
+$( document ).ready(function() {
     //site-wrap is the whole text part of the webpage.
     var myElement = document.getElementById('site-wrap');
     //check is a checkmark, which when checked, shows the menu
@@ -22,7 +22,7 @@ function onLoad() {
         }
     });
     container('home');
-}
+});
 
 function container(type) {
     if (type === "calendar") {
