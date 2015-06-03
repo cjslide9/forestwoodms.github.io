@@ -142,11 +142,6 @@ body {
 ); */
 }
 
-/* Prevents slides from flashing */
-#slides {
-    display:none
-}
-
 #bottom {
     position:absolute;
     bottom:0;
