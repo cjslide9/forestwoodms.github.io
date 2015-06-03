@@ -77,7 +77,7 @@ function container(type) {
         });
     } else if (type === "home") {
         //Load all the files!
-        ljs.load('js/jquery.slides.min.js','css/fullcalendar.min.css', 'css/fullcalendar.print.css', [
+        ljs.load('css/fullcalendar.min.css', 'css/fullcalendar.print.css', [
             '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'
         ], 'js/fullcalendar.min.js', 'js/gcal.js', function() {
             //Okay, set up the calendar, and we should be done.
@@ -102,10 +102,6 @@ function container(type) {
                     },
                     defaultView: 'basicWeek'
                 });
-            });
-            $("#slides").slidesjs({
-                width: 940,
-                height: 528
             });
         });
     }
