@@ -27,7 +27,7 @@ $( document ).ready(function() {
 function container(type) {
     if (type === "calendar") {
         //Load all the files!
-        ljs.load('css/fullcalendar.min.css', 'css/fullcalendar.print.css', [
+        ljs.load('css/fullcalendar.min.css', [
             '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'
         ], 'js/fullcalendar.min.js', 'js/gcal.js', function() {
             //Okay, set up the calendar, and we should be done.
@@ -77,7 +77,7 @@ function container(type) {
         });
     } else if (type === "home") {
         //Load all the files!
-        ljs.load('css/fullcalendar.min.css', 'css/fullcalendar.print.css', [
+        ljs.load('css/fullcalendar.min.css', [
             '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'
         ], 'js/fullcalendar.min.js', 'js/gcal.js', function() {
             //Okay, set up the calendar, and we should be done.
