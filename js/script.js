@@ -106,3 +106,6 @@ function container(type) {
         });
     }
 }
+function evilDemondsStareAtYourSoul() {
+    $('head').append('<link rel="stylesheet" href="css/fullcalendar.print.css" type="text/css" />');
+}
