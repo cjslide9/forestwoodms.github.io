@@ -100,7 +100,7 @@ function container(type) {
                         prevYear: '',
                         nextYear: ''
                     },
-                    defaultView: 'basicWeek'
+                    defaultView: 'basicWeek',
                 });
             });
         });
