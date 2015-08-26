@@ -105,6 +105,16 @@ function container(type) {
         });
       });
     });
+    (function() {
+          var notification = new NotificationFx({
+            message : '<div class="ns-thumb"><img src="img/logo.png"/></div><div class="ns-content"><p><a href="#">This notification test</a> loaded successfully.</p></div>',
+            layout : 'other',
+            ttl : 6000,
+            effect : 'thumbslider',
+            type : 'notice'
+          });
+          notification.show();
+    })();
   }
 }
 
