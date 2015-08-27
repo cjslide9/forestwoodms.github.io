@@ -78,8 +78,8 @@ function container(type) {
   } else if (type === "home") {
     //Load all the files!
     ljs.load('css/fullcalendar.min.css', [
-      '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'
-    ], 'js/fullcalendar.min.js', 'js/gcal.js', function() {
+      '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js', 'js/classie.js', 'js/notificationFx.js'
+    ], 'js/fullcalendar.min.js', 'js/gcal.js', 'js/classie.js', function() {
       //Okay, set up the calendar, and we should be done.
       //Now, let's load the calendar.
       $(".container").text(
@@ -105,42 +105,43 @@ function container(type) {
         });
       });
     });
-          var notification = new NotificationFx({
-            message : '<div class="ns-thumb"><img src="img/logo.png"/></div><div class="ns-content"><p><a href="#">This notification test</a> loaded successfully.</p></div>',
-            layout : 'other',
-            ttl : 6000,
-            effect : 'thumbslider',
-            type : 'notice'
-          });
-          notification.show();
+    var notification = new NotificationFx({
+      message: '<div class="ns-thumb"><img src="img/logo.png"/></div><div class="ns-content"><p><a href="#">This notification test</a> loaded successfully.</p></div>',
+      layout: 'other',
+      ttl: 6000,
+      effect: 'thumbslider',
+      type: 'notice'
+    });
+    notification.show();
   }
 }
 
 function evilDemondsStareAtYourSoul() {
   $('head').append('<link rel="stylesheet" href="css/fullcalendar.print.css" type="text/css" />');
 }
+
 function evilDemondsStareAtYourSoulFullPage() {
   //Load all the files!
   ljs.load('css/fullcalendar.min.css', 'css/fullcalendar.print.css', [
-      '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'
+    '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js'
   ], 'js/fullcalendar.min.js', 'js/gcal.js', function() {
-      //Okay, set up the calendar, and we should be done.
-      //Now, let's load the calendar.
-      $(".mac").text(
-          "I'm loading right now. If I stay here like this, something's broken."
-      );
-      $(".mac").load("views/calendar.html", function() {
-          $('#calendar').fullCalendar({
-              googleCalendarApiKey: window.atob(
-                  "QUl6YVN5QXNhX3U1SnBBN0xoSnY0NGdwWWpVRDZST2FoUW83eEhJ"
-              ),
-              events: {
-                  googleCalendarId: window.atob(
-                      "aWN1dHY3anAwMmt1dXNlc2c2bThiazA4NHNuZWkxMjJAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20="
-                  )
-              }
-          });
+    //Okay, set up the calendar, and we should be done.
+    //Now, let's load the calendar.
+    $(".mac").text(
+      "I'm loading right now. If I stay here like this, something's broken."
+    );
+    $(".mac").load("views/calendar.html", function() {
+      $('#calendar').fullCalendar({
+        googleCalendarApiKey: window.atob(
+          "QUl6YVN5QXNhX3U1SnBBN0xoSnY0NGdwWWpVRDZST2FoUW83eEhJ"
+        ),
+        events: {
+          googleCalendarId: window.atob(
+            "aWN1dHY3anAwMmt1dXNlc2c2bThiazA4NHNuZWkxMjJAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20="
+          )
+        }
       });
+    });
   });
-    $('head').append('<link rel="stylesheet" href="css/fullcalendar.print.css" type="text/css" />');
+  $('head').append('<link rel="stylesheet" href="css/fullcalendar.print.css" type="text/css" />');
 }
