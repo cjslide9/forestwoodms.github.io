@@ -1,153 +1,151 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!-- Yes, we use utf-8. Deal with it. -->
-    <meta charset="utf-8">
-	<!-- Our large stylesheet. Very large. -->
-	<link href="css/style.css" rel='stylesheet' type='text/css'>
-	<!-- This provides onLoad(); which gets called onload from the <body> tag. It utilitzies Hammer.js, which is below. -->
-    <script src="js/script.js"></script>
-	<!-- Hammer.js provides JavaScript gesture recognition. It does not use jQuery. -->
-    <script src=
-    "https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script><!-- Title. Don't know what else to say. -->
-	<script src="js/l.min.js"></script>
-    <title>PTA Test</title>
+  <!-- Yes, we use utf-8. Deal with it. -->
+  <meta charset="utf-8">
+  <!-- Our large stylesheet. Very large. -->
+  <link href="css/style.css" rel='stylesheet' type='text/css'>
+  <!-- Notification's style stylesheet -->
+  <link href="css/ns-style-other.css" rel='stylesheet' type='text/css'>
+  <!-- Hammer.js provides JavaScript gesture recognition. It does not use jQuery. -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+  <!-- Title. Don't know what else to say. -->
+  <!-- A tiny JavaScript loader -->
+  <script src="js/l.min.js"></script>
+  <!-- Speaking of jQuery... -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Notifications -->
+  <script src="js/modernizr.custom.js"></script>
+  <!-- Main script -->
+  <script src="js/script.js"></script>
+  <!-- Plus one button. -->
+  <script async="" defer src="https://apis.google.com/js/platform.js">
+    {
+      parsetags: 'explicit'
+    }
+  </script>
+
+  <title>PTA Test</title>
 </head>
 
-<body onload="onLoad()">
-    <!-- onLoad is defined in js/script.js -->
+<body>
+  <!-- images that appaer in the notifications should be preloaded -->
+  <div style="overflow: hidden; opacity: 0; width: 0px; height:0px;">
+    <img src="img/logo.png" />
+  </div>
+  </div>
+  <!-- /container -->
+  <div class="mac">
+    <!-- from style.css in Mac section-->
 
-    <div class="mac">
-        <!-- from style.css in Mac section-->
+    <div class="top">
+      <a href="javascript:container('home')">
+        <img src="logo.png" style="width: 5%; height: 5%" />
+      </a>
+      <div id='cssmenu'>
+        <ul>
+          <li class='active' id="home">
+            <a href="javascript:container('home')">
+              <span>Home</span>
+            </a>
+          </li>
 
-        <div class="top">
-          <div id='cssmenu'>
-            <ul>
-              <li class='active'><a href='javascript:container('none');'><span>Home</span></a></li>
 
-              <li><a href='#'><span>Sign Up Forms</span></a></li>
 
-              <li><a href='#'><span>Volunteers</span></a></li>
+          <li>
+            <a href="javascript:container('vol')" id="forms">
+              <span>PTA Forms</span>
+            </a>
+          </li>
 
-              <li><a href='#'><span>Scholarship Applications</span></a></li>
 
-              <li><a href='#'><span>Memberships</span></a></li>
 
-              <li><a href='#'><span>Background Checks</span></a></li>
+          <li>
+            <a href="javascript:container('member')" id="member">
+              <span>Memberships</span>
+            </a>
+          </li>
 
-              <li class='last'><a id="calendarButton" class="calendarButton" href="javascript:container('calendar')"><span>Contact</span></a></li>
-            </ul>
-          </div>
-            <nav>
-                <ul class="cf">
-                    <li>
-                        <a href="">Home</a>
-                    </li>
+          <li>
+            <a href="javascript:container('bc')" id="background">
+              <span>Background Checks</span>
+            </a>
+          </li>
 
-                    <li>
-                        <a class="dropdown" href="#">Sign-up Forms</a>
+          <li>
+            <a href="javascript:container('contact')" id="contact">
+              <span>Contact</span>
+            </a>
+          </li>
 
-                        <ul>
-                            <li>
-                                <a href="#">Volunteers</a>
-                            </li>
-
-                            <li>
-                                <a href="#">Scholarship applications</a>
-                            </li>
-
-                            <li>
-                                <a href="#">Memberships</a>
-                            </li>
-							<li>
-								<a href="#">Background Check</a>
-							</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a id="calendarButton" class="calendarButton" href="javascript:container('calendar')">Calendar</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Contact Us</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-		<div class="container" id="container"></div>
+          <li class='last' id="calendarDiv">
+            <a class="calendarButton" href="javascript:container('calendar')" id="calendarButton">
+              <span>Calendar</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div class="ios">
-        <ul class="navigation">
-            <li class="nav-item">
-                <a href="#">Home</a>
-            </li>
+    <div class="container" id="container"></div>
+    <div id="bottom">
+      <a href="http://forestwood.lisd.net/apps/pages/index.jsp?uREC_ID=130332&type=d&pREC_ID=234862">
+            Go to the LISD site</a>
+    </div>
+  </div>
 
-            <li class="nav-item">
-                <a href="#">Portfolio</a>
-            </li>
+  <div class="ios">
+    <ul class="navigation">
+      <li class="nav-item">
+        <a href="#">Home</a>
+      </li>
 
-            <li class="nav-item">
-                <a href="#">About</a>
-            </li>
+      <li class="nav-item">
+        <a href="#">Portfolio</a>
+      </li>
 
-            <li class="nav-item">
-                <a href="#">Blog</a>
-            </li>
+      <li class="nav-item">
+        <a href="#">About</a>
+      </li>
 
-            <li class="nav-item">
-                <a href="#">Contact</a>
-            </li>
-        </ul><input class="nav-trigger" id="nav-trigger" type="checkbox">
-        <label for="nav-trigger"></label>
+      <li class="nav-item">
+        <a href="#">Blog</a>
+      </li>
 
-        <div class="site-wrap" id="site-wrap">
-            <h1>Pure CSS Off-Screen Menu</h1>
+      <li class="nav-item">
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+    <input class="nav-trigger" id="nav-trigger" type="checkbox">
+    <label for="nav-trigger"></label>
 
-            <h3>Finally, an off-screen menu that doesn't require a bunch of
-            Javascript to work.</h3>
+    <div class="site-wrap" id="site-wrap">
+      <h1>Pure CSS Off-Screen Menu</h1>
 
-            <p>This concept relies on the <code>:checked</code> pseudo-selector
-            as well as the general sibling <code>~</code> selector, so it has
-            decent browser support.</p>
+      <h3>Finally, an off-screen menu that doesn't require a bunch of Javascript to work.</h3>
 
-            <p><strong>Browsers supported:</strong> IE9+, Firefox 3.5+, Chrome
-            any, Safari 3.2+, Opera 9.5+</p>
+      <p>Working together, with PTA mom Michelle Bagrow, the Forestwood PTA can achive heights we've never thought possible before.</p>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
-            vero nisi eos sed qui natus, ut eius reprehenderit error nesciunt
-            veniam aliquam nulla itaque labore obcaecati molestiae eveniet,
-            perferendis provident amet perspiciatis expedita accusantium!
-            Eveniet, quos voluptas et, labore natus, saepe unde est nulla sit
-            eaque tempore debitis accusantium. Recusandae.</p>
+      <p>
+        <strong>Browsers supported:</strong> IE9+, Firefox 3.5+, Chrome any, Safari 3.2+, Opera 9.5+</p>
 
-            <p>Dolorem aliquam a libero reiciendis obcaecati doloribus ipsa eos
-            laudantium, dicta in! Odit iure ut ratione, dolorum cupiditate
-            perferendis voluptatum sapiente, dignissimos sunt necessitatibus,
-            reprehenderit consequatur dolorem. Aliquam veniam quaerat, pariatur
-            deserunt reiciendis vero vitae, repellat omnis sequi dolor
-            nesciunt. Nihil similique alias impedit, obcaecati eligendi
-            delectus voluptatum! Ipsum, vel.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi vero nisi eos sed qui natus, ut eius reprehenderit error nesciunt veniam aliquam nulla itaque labore obcaecati molestiae eveniet, perferendis provident amet perspiciatis expedita accusantium!
+        Eveniet, quos voluptas et, labore natus, saepe unde est nulla sit eaque tempore debitis accusantium. Recusandae.</p>
 
-            <p>Sint, perspiciatis nemo aut, rerum excepturi deleniti modi quos
-            nihil corporis eum, maiores soluta labore, consectetur eligendi
-            nesciunt. Placeat, incidunt! Illum placeat eligendi, veritatis
-            consectetur eum! Dolor obcaecati minima ab placeat voluptatem neque
-            modi doloribus, magnam qui voluptate eaque in. Nulla expedita hic
-            porro architecto facere officiis vitae numquam, dolor!</p>
+      <p>Dolorem aliquam a libero reiciendis obcaecati doloribus ipsa eos laudantium, dicta in! Odit iure ut ratione, dolorum cupiditate perferendis voluptatum sapiente, dignissimos sunt necessitatibus, reprehenderit consequatur dolorem. Aliquam veniam quaerat,
+        pariatur deserunt reiciendis vero vitae, repellat omnis sequi dolor nesciunt. Nihil similique alias impedit, obcaecati eligendi delectus voluptatum! Ipsum, vel.</p>
 
-            <p>Perferendis quis ea incidunt ducimus nisi voluptate natus.
-            Repellat asperiores quod rerum rem quos blanditiis enim modi,
-            veniam voluptas a facilis! Velit cum omnis, voluptatum eum
-            inventore! Corrupti, suscipit, neque distinctio expedita est
-            laboriosam cum aliquid minus tempora quaerat officia possimus unde
-            vel deleniti eaque fugit accusamus iusto dolorum natus.</p>
+      <p>Sint, perspiciatis nemo aut, rerum excepturi deleniti modi quos nihil corporis eum, maiores soluta labore, consectetur eligendi nesciunt. Placeat, incidunt! Illum placeat eligendi, veritatis consectetur eum! Dolor obcaecati minima ab placeat voluptatem
+        neque modi doloribus, magnam qui voluptate eaque in. Nulla expedita hic porro architecto facere officiis vitae numquam, dolor!</p>
 
-            <p>Demo by Austin Wulf. <a href=
-            "http://www.sitepoint.com/pure-css-off-screen-navigation-menu">See
+      <p>Perferendis quis ea incidunt ducimus nisi voluptate natus. Repellat asperiores quod rerum rem quos blanditiis enim modi, veniam voluptas a facilis! Velit cum omnis, voluptatum eum inventore! Corrupti, suscipit, neque distinctio expedita est laboriosam
+        cum aliquid minus tempora quaerat officia possimus unde vel deleniti eaque fugit accusamus iusto dolorum natus.</p>
+
+      <p>Demo by Austin Wulf. <a href="http://www.sitepoint.com/pure-css-off-screen-navigation-menu">See
             article</a>.</p>
-        </div>
     </div>
+  </div>
 </body>
+
 </html>
